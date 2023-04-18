@@ -1,17 +1,37 @@
-# MicroServices
+# Microservices Architecture
 
-I learned the concept of microservices through this project . I used 4 microservices in this project . I used spring cloud gateway as gateway in my project .
-And Eureka server for service registry .
+This project is developed using the microservices architecture, which is a software design pattern that structures an application as a collection of small, independent, and loosely coupled services. In this project, there are four microservices that are integrated together using Spring Cloud Gateway and Eureka Server.
+
+## Services
+### 1. User Microservice
+    This microservice is responsible for handling all the user-related operations. Users can perform various tasks, such as creating a new account, updating their profile, and getting their ratings for particular hotels.
+
+### 2. Rating Microservice
+    This microservice manages all the operations related to hotel ratings. Users can view the hotels they have rated, and hotels can access their ratings and reviews.
+
+### 3. Hotel Microservice
+    This microservice handles all the operations related to hotels, such as creating a new hotel, updating the details of an existing hotel, and deleting a hotel.
+
+### 4. Identity Microservice
+    This microservice is responsible for user authentication using JWT tokens. New users must register here first, and then they can generate a token using their credentials to access other microservices.
+
+## Gateway and Service Registry
+###    Spring Cloud Gateway
+Spring Cloud Gateway is used as the gateway for this project, which is responsible for routing requests to different microservices. It also handles load balancing and other cross-cutting concerns.
+
+### Eureka Server
+Eureka Server is used as the service registry in this project, which is responsible for maintaining a list of available microservices and their instances. The gateway uses this registry to route requests to the appropriate microservice.
+
+### Conclusion
+Using microservices architecture allows for greater scalability, flexibility, and resilience in application development. It also enables easier testing, deployment, and maintenance of the application. By leveraging the different microservices and integrating them using Spring Cloud Gateway and Eureka Server, this project demonstrates the power and benefits of this architecture.
 
 
-## 1 . User-MicroService
-    This is the main service in which we can able to perform all the user related tasks and in user service we can get ratings of particular user given for particular hotel .
 
-## 2 . Rating MicroService
-    This service is used to perform the tasks related to Ratings and in rating service we get the hotels also that which rating is related to which hotel .
 
-## 3 . Hotel Service 
-    Service is used to perform all the hotel related tasks like create new hotel , any updation in old records , delete operatins and several others .
 
-## 4 . Identity Service
-    This Service is used for Authenticate a user on the basis of JWt token . New user will first register here then after genearting token from their credentials only they will get access of other microservices .
+
+
+
+
+
+
